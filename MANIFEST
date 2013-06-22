@@ -1,0 +1,6 @@
+Changes
+MANIFEST
+Makefile.PL
+WarnGlobal.pm
+WarnGlobal/Scalar.pm
+test.pl
