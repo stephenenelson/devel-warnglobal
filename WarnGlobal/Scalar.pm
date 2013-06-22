@@ -1,7 +1,7 @@
 package Devel::WarnGlobal::Scalar;
 
 use strict;
-use vars qw(%FIELDS);
+use warnings;
 
 use Carp;
 
@@ -9,8 +9,6 @@ use Carp;
 # Items to export into callers namespace by default. Note: do not export
 # names by default without a very good reason. Use EXPORT_OK instead.
 # Do not simply export all your public functions/methods/constants.
-
-use fields qw(get set name warn die_on_write);
 
 ################################# Methods ###############################
 
@@ -21,7 +19,7 @@ sub TIESCALAR {
     exists $in->{'get'} or croak "Improper use of 'tie' on $type: Field 'get' required; stopped";
 
     no strict 'refs';
-    my Devel::WarnGlobal::Scalar $self = bless [ \%{"${type}::FIELDS"} ], $type;
+    my Devel::WarnGlobal::Scalar $self = bless {}, $type;
     $self->{'get'} = $in->{'get'};
     $self->{'set'} = $in->{'set'} if defined $in->{'set'};
     $self->{'name'} = $in->{'name'} if defined $in->{'name'};
