@@ -7,8 +7,6 @@ use Carp;
 
 use Devel::WarnGlobal::Scalar;
 
-$VERSION = '0.06';
-
 sub import {
     no strict 'refs';
 
