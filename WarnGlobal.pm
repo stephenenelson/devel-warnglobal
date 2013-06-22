@@ -180,7 +180,7 @@ Variable-shadowing checks, so that we can monitor whether the tied variable and 
 
 =head1 AUTHOR
 
-Stephen Nelson, steven@jubal.com
+Stephen Nelson, stephenenelson@mac.com
 
 =head1 SEE ALSO
 

@@ -157,7 +157,7 @@ produce a warning, but will have no effect on the value.)
 
 =head1 AUTHOR
 
-Stephen Nelson, steven@jubal.com
+Stephen Nelson, stephenenelson@mac.com
 
 =head1 SEE ALSO
 
