@@ -1,5 +1,9 @@
 Revision history for Perl extension Devel::WarnGlobal.
 
+0.06  Fri Jun 21 22:58:53 PDT 2013
+        - Eliminated 'use fields'
+        - Moved to Dist::Zilla
+
 0.05  Tue May 8 07:23:00 2001
         - More documentation fixes
         - Added tests for read-versions of warn and die_on_write methods
