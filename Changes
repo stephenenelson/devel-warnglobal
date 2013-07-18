@@ -1,5 +1,8 @@
 Revision history for Perl extension Devel::WarnGlobal.
 
+0.07  July 18, 2013 12:09:01 AM PDT
+        - Letting PodWeaver handle manpage boilerplate
+
 0.06  Fri Jun 21 22:58:53 PDT 2013
         - Eliminated 'use fields'
         - Moved to Dist::Zilla

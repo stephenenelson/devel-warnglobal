@@ -175,14 +175,9 @@ Support for tying arrays, hashes, and filehandles
 
 Variable-shadowing checks, so that we can monitor whether the tied variable and the subroutine stay in sync
 
-
-=head1 AUTHOR
-
-Stephen Nelson, stephenenelson@mac.com
-
 =head1 SEE ALSO
 
-perl(1), perltie(1), Tie::Watch(3).
+L<Variable::Magic>
 
 =cut
 
