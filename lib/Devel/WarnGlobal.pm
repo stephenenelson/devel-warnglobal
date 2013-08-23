@@ -1,6 +1,7 @@
 package Devel::WarnGlobal;
 
 use strict;
+use warnings;
 use vars '$VERSION';
 
 use Carp;
