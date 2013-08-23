@@ -37,7 +37,7 @@ warning_ok {
     my $foo = $READONLY_GLOBAL;
     ok( $foo, 5 );
 }
-"Global '\$READONLY_GLOBAL' was read-accessed at t/1.t line 37.\n";
+"Global '\$READONLY_GLOBAL' was read-accessed at $0 line 37.\n";
 
 sub get_readonly {
     return 5;
@@ -46,7 +46,7 @@ sub get_readonly {
 warning_ok {
     $READONLY_GLOBAL = 37;
 }
-"Global '\$READONLY_GLOBAL' was write-accessed at t/1.t line 47.\n";
+"Global '\$READONLY_GLOBAL' was write-accessed at $0 line 47.\n";
 
 warning_ok {
     my $bar = $READONLY_GLOBAL;
@@ -55,11 +55,11 @@ warning_ok {
     $ro->warn(1);
     my $bar3 = $READONLY_GLOBAL;
 }
-"Global '\$READONLY_GLOBAL' was read-accessed at t/1.t line 52.\n",
-  "Global '\$READONLY_GLOBAL' was read-accessed at t/1.t line 56.\n";
+"Global '\$READONLY_GLOBAL' was read-accessed at $0 line 52.\n",
+  "Global '\$READONLY_GLOBAL' was read-accessed at $0 line 56.\n";
 
 eval { $DIE_ON_WRITE_GLOBAL = 33; };
-ok( $@, "Attempt to write-access a global(read-only) at t/1.t line 61.\n" );
+ok( $@, "Attempt to write-access a global(read-only) at $0 line 61.\n" );
 
 warning_ok {
     my $foo = $READWRITE_GLOBAL;
@@ -68,15 +68,15 @@ warning_ok {
     $foo              = $READWRITE_GLOBAL;
     ok( $foo, 33 );
 }
-"A global was read-accessed at t/1.t line 65.\n",
-  "A global was write-accessed at t/1.t line 67.\n",
-  "A global was read-accessed at t/1.t line 68.\n";
+"A global was read-accessed at $0 line 65.\n",
+  "A global was write-accessed at $0 line 67.\n",
+  "A global was read-accessed at $0 line 68.\n";
 
 warning_ok {
     my $foo = $WG_GLOBAL;
     ok( $foo, 'Sqweenookle!' );
 }
-"Global '\$WG_GLOBAL' was read-accessed at t/1.t line 76.\n";
+"Global '\$WG_GLOBAL' was read-accessed at $0 line 76.\n";
 
 warning_ok {
     eval {
@@ -86,13 +86,13 @@ warning_ok {
     };
     ok( length($@) == 0 );
 }
-"A global was write-accessed at t/1.t line 85.\n";
+"A global was write-accessed at $0 line 85.\n";
 eval {
     my $dh = tied $DIE_ON_WRITE_GLOBAL;
     $dh->die_on_write(1);
     $DIE_ON_WRITE_GLOBAL = "That's a mean bunny!";
 };
-ok( $@, "Attempt to write-access a global(read-only) at t/1.t line 93.\n" );
+ok( $@, "Attempt to write-access a global(read-only) at $0 line 93.\n" );
 
 warning_ok {
     my $bar = $WG_GLOBAL2;
@@ -102,9 +102,9 @@ warning_ok {
     ok( $bar2, 'Crow' );
 
 }
-"Global '\$WG_GLOBAL2' was read-accessed at t/1.t line 98.\n",
-  "Global '\$WG_GLOBAL2' was write-accessed at t/1.t line 100.\n",
-  "Global '\$WG_GLOBAL2' was read-accessed at t/1.t line 101.\n";
+"Global '\$WG_GLOBAL2' was read-accessed at $0 line 98.\n",
+  "Global '\$WG_GLOBAL2' was write-accessed at $0 line 100.\n",
+  "Global '\$WG_GLOBAL2' was read-accessed at $0 line 101.\n";
 
 TEST: {
     my $tied = tied $READONLY_GLOBAL;
