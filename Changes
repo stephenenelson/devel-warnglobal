@@ -1,5 +1,11 @@
 Revision history for Perl extension Devel::WarnGlobal.
 
+0.08 2013-08-23
+    - Moved test.pl to t/1.t and un-hardcoded the file name
+    - Switched to Dist::Zilla OurPkgVersion
+    - Reformatted the Changes file
+    - Added 'use warnings' to Devel::WarnGlobal
+
 0.07 2013-07-18
     - Letting PodWeaver handle manpage boilerplate
 
