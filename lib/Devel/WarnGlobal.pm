@@ -75,7 +75,7 @@ __END__
 
 =head1 NAME
 
-Devel::WarnGlobal - Perl extension to aid in eliminating globals
+Devel::WarnGlobal - Track down and eliminate globals
 
 =head1 SYNOPSIS
 

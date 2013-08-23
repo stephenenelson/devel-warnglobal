@@ -119,7 +119,7 @@ __END__
 
 =head1 NAME
 
-Devel::WarnGlobal::Scalar - Perl extension aiding elimination of globals
+Devel::WarnGlobal::Scalar - Track down and eliminate scalar globals
 
 =head1 SYNOPSIS
 
