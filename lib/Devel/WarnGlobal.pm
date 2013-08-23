@@ -1,5 +1,7 @@
 package Devel::WarnGlobal;
 
+# ABSTRACT: Helps track down and eliminate globals
+
 use strict;
 use warnings;
 

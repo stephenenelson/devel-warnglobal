@@ -1,5 +1,7 @@
 package Devel::WarnGlobal::Scalar;
 
+# ABSTRACT: Track down and eliminate scalar globals
+
 use strict;
 use warnings;
 
