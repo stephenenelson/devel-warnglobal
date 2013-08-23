@@ -3,6 +3,8 @@ package Devel::WarnGlobal::Scalar;
 use strict;
 use warnings;
 
+# VERSION
+
 use Carp;
 
 
